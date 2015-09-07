@@ -1,0 +1,24 @@
+using System;
+namespace CSharpPractice
+{
+    class Tutorial
+    {
+        static void Main(string[] args)
+        {
+            int[] array = new int[4];
+            Console.WriteLine("Enter the values to be stored: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("Enter number {0}: ", i+1);
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Array.Sort(array);
+            foreach (int number in array)
+            {
+                Console.Write(number);
+                Console.Write(' ');
+            }
+            Console.ReadKey();
+        }
+    }
+}
